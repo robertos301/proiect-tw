@@ -1,0 +1,38 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+/* SOCIAL STUFF */
+.social-container {
+    background: white;
+    padding: 25px 50px;
+    position:absolute;
+    bottom: 0;
+}
+
+a.social {
+    margin: 0 1rem;
+    transition: transform 250ms;
+    display: inline-block;
+}
+
+    a.social:hover {
+        transform: translateY(-2px);
+    }
+
+a.airbnb {
+    color: black;
+}
+
+a.tripadvisor {
+    color: black;
+}
+
+a.facebook {
+    color: black;
+}
+
+a.instagram {
+    color: black;
+}
