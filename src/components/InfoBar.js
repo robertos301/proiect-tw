@@ -13,8 +13,9 @@ import { maxHeight } from "@material-ui/system";
 const useStyles = makeStyles({
   card: {
     maxWidth: 300,
-    marginTop: "150px",
-    display:"grid"
+    marginTop: "30px",
+    marginRight:"25px",
+    display:"inline-block"
     
   },
   media: {
@@ -27,11 +28,13 @@ const useStyles = makeStyles({
 
 export default function MediaCard(props) {
   const classes = useStyles();
-  const {id , name, imgsrc, description}=props;
-
-// console.log(id ,name,imgsrc,description);
+   const {id , name, imgsrc, description}=props.locations;
+  const selectItem=props.selectItem;
+ 
+ 
   return (
-    <Card className={classes.card} position="static">
+   
+   <Card onClick={()=> selectItem(id)} className={classes.card} position="static">
      
       <CardActionArea>
         <CardMedia

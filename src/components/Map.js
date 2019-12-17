@@ -7,9 +7,9 @@ import makeAnimated from 'react-select/animated';
 import Button from '@material-ui/core/Button';
 import { FaLocationArrow } from 'react-icons/fa';
 import FoodMarkers from "./Markers/FoodMarkers"
+import {LocationConsumer} from "../context";
 Geocode.setApiKey( "AIzaSyBDZxFEDcqP-idz3NhTnou7A0psGxMsnnA" );
 Geocode.enableDebug();
-
 
 const options = [
 	{ value: 'Restaurants', label: 'Restaurant' },
@@ -262,8 +262,17 @@ class Map extends Component{
 							   defaultCenter={{ lat: this.state.mapPosition.lat, lng: this.state.mapPosition.lng }}
 				
 					>
+						<LocationConsumer>
+							{(value) => {
+								// console.log("VALUE DIN MAP")
+								// console.log(value)
+								
+									return <FoodMarkers key={value.selectedLocation.id} location={value.selectedLocation}/>
+								
+							}}
+							
+						</LocationConsumer>
 									
-									<FoodMarkers />
 									
 						<Select onChange={this.handleChange} isMulti components={animatedComponents} options = {options} />
 						<Button variant="contained" onClick={this.findCoordinates}>

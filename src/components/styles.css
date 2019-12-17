@@ -1,0 +1,43 @@
+.App {
+    font-family: sans-serif;
+    text-align:inherit;
+    padding-top: 2em;
+}
+
+/* SOCIAL STUFF */
+.social-container {
+    background: transparent;
+    padding: 5px 10px;
+    position:center;
+    bottom: 0;
+    top: 50px;
+    
+}
+
+a.social {
+    margin: 0 2rem;
+    transition: transform 250ms;
+    display: inline-block;
+}
+
+
+a.airbnb {
+    color: #ff4500;
+   
+    padding-left: 1em;
+}
+
+a.tripadvisor {
+    color: #ff4500;
+}
+
+a.facebook {
+    color: #ff4500;
+    padding-left: 1em;
+}
+
+a.instagram {
+    color: #ff4500;
+   
+    padding-left: 1em;
+}

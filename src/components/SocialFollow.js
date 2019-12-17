@@ -14,19 +14,18 @@ export default function SocialFollow() {
      <a href="https://www.instagram.com/exploretimisoara/" className="instagram social">
         <FontAwesomeIcon icon={faInstagram} size="2x" />
       </a>
-      <a
-        href="https://www.facebook.com/TimisoaraOrasEuropean"
-        className="facebook social"
-      >
-        <FontAwesomeIcon icon={faFacebook} size="2x" />
-      </a>
-      <a href="https://www.airbnb.com" className="airbnb social">
-        <FontAwesomeIcon icon={faAirbnb} size="2x" />
-      </a>
 
-	  <a href="https://www.tripadvisor.com" className="trip social">
+     <a href="https://www.facebook.com/TimisoaraOrasEuropean"className="facebook social" >
+        <FontAwesomeIcon icon={faFacebook} size="2x" />
+     </a>
+
+     <a href="https://www.airbnb.com" className="airbnb social">
+        <FontAwesomeIcon icon={faAirbnb} size="2x" />
+     </a>
+
+	 <a href="https://www.tripadvisor.com" className="tripadvisor social">
         <FontAwesomeIcon icon={faTripadvisor} size="2x" />
-      </a>
+     </a>
     </div>
   );
 }

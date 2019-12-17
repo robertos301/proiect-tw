@@ -3,16 +3,10 @@ import Box from "@material-ui/core/Box";
 import AppBar from "@material-ui/core/AppBar";
 import Button from "@material-ui/core/Button";
 import { Container } from "@material-ui/core";
-
-import {
-  IoIosHome,
-  IoIosPizza,
-  IoMdLocate,
-
-  IoIosHelpCircleOutline
-} from "react-icons/io";
+import {Icon} from "../data"
+import Grid from "@material-ui/core/Grid"
 import { withStyles } from "@material-ui/core/styles";
-
+import SocialFollow from "./SocialFollow";
 const styles = theme => ({
   theButton: {
     backgroundColor: "#0088cc",
@@ -26,12 +20,15 @@ const styles = theme => ({
 
   theMenubar: {
     backgroundColor: 'rgba(0,0,0,0.2)',
-    padding: "12px"
+    padding: "12px",
+    flexDirection:'row',
+    position:"static"
   },
 
   theContainer: {
     marginLeft: "0%", ///muti butoanele stanga, dreapta folosind marginLeft si marginRight
-    padding: "0px"
+    padding: "0px",
+    flexDirection:'row'
   },
 
   theBox: {
@@ -44,40 +41,26 @@ const styles = theme => ({
 
 class Menubar extends React.Component {
   render() {
+   const imgsrc = "img/Icoana.png"
     const { classes } = this.props;
     return (
       <AppBar className={classes.theMenubar} position="static">
-        <Container className={classes.theContainer}>
-          <Box className={classes.theBox}>
+        
+          <Grid container direction='row'>
+           <Grid item xs={12}>
             <img
               alt="City Guide"
               align="middle"
-              height="40px"
-              width="100px"
-              src="https://preview.ait-themes.club/theme/cityguide/wp-content/uploads/sites/13/logo_white.png"
+              height="150px"
+              width="150px"
+              //src="https://preview.ait-themes.club/theme/cityguide/wp-content/uploads/sites/13/logo_white.png"
+              src={imgsrc}
             ></img>
-          </Box>
-          <Button className={classes.theButton}>
-            {" "}
-            <IoIosHome />
-            Home
-          </Button>
-          <Button className={classes.theButton}>
-            {" "}
-            <IoIosPizza />
-            Food
-          </Button>
-          <Button className={classes.theButton}>
-            {" "}
-            <IoMdLocate />
-            Locations
-          </Button>
-          <Button className={classes.theButton}>
-            {" "}
-            <IoIosHelpCircleOutline />
-            About
-          </Button>
-        </Container>
+            </Grid>
+            <Grid item xs={12}>
+          <SocialFollow/>
+          </Grid>
+         </Grid>
       </AppBar>
     );
   }
