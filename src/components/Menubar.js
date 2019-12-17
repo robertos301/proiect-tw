@@ -31,12 +31,19 @@ const styles = theme => ({
     flexDirection:'row'
   },
 
+  theCont: {
+    margin:"auto",
+    display:"inline-block",
+    
+  },
+  
   theBox: {
     marginRight: "33%",
     width: "90px",
     height: "35px",
     display: "inline"
   }
+
 });
 
 class Menubar extends React.Component {
@@ -46,8 +53,7 @@ class Menubar extends React.Component {
     return (
       <AppBar className={classes.theMenubar} position="static">
         
-          <Grid container direction='row'>
-           <Grid item xs={12}>
+          <div className={classes.theCont}>
             <img
               alt="City Guide"
               align="middle"
@@ -56,11 +62,10 @@ class Menubar extends React.Component {
               //src="https://preview.ait-themes.club/theme/cityguide/wp-content/uploads/sites/13/logo_white.png"
               src={imgsrc}
             ></img>
-            </Grid>
-            <Grid item xs={12}>
+           
           <SocialFollow/>
-          </Grid>
-         </Grid>
+          </div>
+         
       </AppBar>
     );
   }
